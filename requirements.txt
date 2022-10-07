@@ -1,2 +1,4 @@
 Flask
-Flask-Restful
+Flask_restful
+Flask_SQLAlchemy
+pymysql
