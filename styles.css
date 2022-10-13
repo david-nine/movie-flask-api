@@ -1,0 +1,22 @@
+header {
+    display: flex;
+    background-color: rgb(66, 129, 184);
+    color: white;
+    justify-content: center;
+    padding: 1em;
+}
+
+footer {
+    height: 30px;
+    background-color: rgb(66, 129, 184);
+}
+
+.movies {
+    padding: 1em;
+}
+
+.movies #movie-list {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
