@@ -7,17 +7,14 @@ function getMovieInfow() {
 }
 
 function getMovieInfo() {
-    $.ajax(`http://localhost:5000/movies`, {
-        type: 'GET',
-        error: function (response) {
-            $('.error').css("display", "block");
-            $('#error-message').remove();
-            $('.error').append(`<span id="error-message">${response.responseJSON.error.message}</span>`);
-            setTimeout(() => {
-                $('.error').css("display", "none");
-            }, 3000)
-        },
+    $.ajax({
+        url: `http://localhost:5000/movies`,
+        contentType: 'application/json',
+        headers: {'Content-Type': 'application/json'},
+        dataType: 'json',
+        method: 'GET',
         success: function (data) {
+            console.log(data);
             buildCard()
         }
     })
@@ -55,4 +52,4 @@ function getCardStructure(classCode) {
         + `</div>`
 }
 
-document.getElementById('movie-list').addEventListener('click', getMovieInfow)
+document.getElementById('movie-list').addEventListener('click', getMovieInfo)

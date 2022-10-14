@@ -57,6 +57,10 @@ class MovieModel (database.Model):
     @classmethod
     def find_all(cls):
         return cls.query.all()
+    
+    def delete(self):
+        database.session.delete(self)
+        database.session.commit()
 
     def save_movie(self):
         database.session.add(self)

@@ -109,7 +109,7 @@ class Movie(Resource):
     def delete(self, id):
         movie = Movie.find_movie(id)
         if movie:
-            movies.remove()
+            movie.delete()
             return {}, 200
         else:
             return 'Movie not found', 404
