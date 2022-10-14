@@ -43,6 +43,10 @@ class UserModel (database.Model):
     
     def save_user(self):
         database.session.add(self)
+        database.session.commit()    
+    
+    def delete(self):
+        database.session.delete(self)
         database.session.commit()
     
     def update_user(self):

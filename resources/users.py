@@ -67,9 +67,9 @@ class User(Resource):
 
 
     def delete(self, id):
-        movie = User.find_user(id)
-        if movie:
-            default_users.remove()
+        user = User.find_user(id)
+        if user:
+            user.remove()
             return {}, 200
         else:
             return 'User not found', 404
