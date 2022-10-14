@@ -1,4 +1,9 @@
 from sql_alchemy import database
+from enum import Enum
+
+class GenderType(Enum):
+    male = 1
+    female = 2
 
 class MovieModel (database.Model):
 

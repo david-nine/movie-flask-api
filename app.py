@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_restful import Api
 from resources.movies import Movies, Movie
+from resources.users import User, Users
 from sql_alchemy import database
 
 app = Flask(__name__)
@@ -16,6 +17,8 @@ def create_database():
 
 api.add_resource(Movies, '/movies')
 api.add_resource(Movie, '/movies/<int:id>')
+api.add_resource(Users, '/users')
+api.add_resource(User, '/users/<int:id>')
 
 if __name__ == '__main__':
     database.init_app(app)

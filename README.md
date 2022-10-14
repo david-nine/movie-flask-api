@@ -2,9 +2,8 @@
 
 ## Install
 
-python -m venv <name>
-Execute <name>/Scripts/activate.bat
-pip install Flask
-pip install Flask_restful
+python -m venv env
+Execute env/Scripts/activate.bat
 cd ../.. 
+python -m pip install -r requirements.txt
 python app.py
