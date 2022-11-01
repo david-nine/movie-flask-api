@@ -13,14 +13,23 @@ Web
 Install virtual ambient.
 
 python -m venv ambvir
+
 cd ambvir
+
 cd Scripts
+
 activate.bat
+
 pip install flask
+
 pip install Flask_restful
---para o bancocd
+
+--para o banco
+
 pip install Flask-SQLAlchemy
+
 pip install pymysql
+
 
 cd../..
 python app.py
